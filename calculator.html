@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script>
+        function outcome()
+        {
+            const x = Number(document.getElementById("num1").value);
+            const y = Number(document.getElementById("num2").value);
+            var z=0;
+            if(document.getElementById("box1").checked){
+                z = x + y;
+            }
+            else if(document.getElementById("box2").checked){
+
+            z = x - y;
+            }
+            else if(document.getElementById("box3").checked){
+                z = x * y;
+            }
+            else{
+                z = x / y;
+            }
+            document.getElementById("resultArea").innerHTML= "Result : "+ String(z);
+            }
+    </script>
+</head>
+<body>
+    <div class ="wrapper">
+        <h1>
+            Calculator
+        </h1>
+        <label for="exampleInputEmail1" class="form-label">Number 1</label>
+        <input type="text" name = "num1" id="num1">
+        <br>
+
+        <label for="exampleInputPassword1" class="form-label">Number 2</label>
+        <input type="text" name = "num2" id="num2">
+        <br>
+        <br>
+        <input type ="radio" name ="sign-area" id="box1" value="add" checked> <b>+</b>
+        <input type ="radio" name ="sign-area" id="box2" value="subtract" checked> <b>-</b>
+        <input type ="radio" name ="sign-area" id="box3" value="multiply" checked> <b>*</b>
+        <input type ="radio" name ="sign-area" id="box4" value="divide" checked> <b>/</b>
+        <br>
+        <br>
+        <button type="button" onclick="outcome()">Calculate</button>
+        <h1 id="resultArea"></h1>
+    </div>
+        
+    
+</body>
+</html>
