@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgba(0, 128, 0, 0.815);
+           
+        }
+       h2{
+           text-align: center;
+           color: rgba(0, 0, 139, 0.822);
+       }
+        button{
+            margin-left: 205px;
+            margin-top: 20px;
+        }
+        div{
+            background-color: rgba(128, 128, 128, 0.877);
+            padding-top: 100px;
+            padding-bottom: 150px;
+            margin-left: 100px;
+            margin-right: 100px;
+            
+        }
+    </style>
+    <script>
+        let counter = 0;
+        function count(){
+            counter++;
+            document.querySelector("h1").innerHTML= counter;    
+        }
+        function decrement(){
+            counter--;
+            document.querySelector("h1").innerHTML= counter;
+        }
+        function reset(){
+            counter=0;
+            document.querySelector("h1").innerHTML=0;
+        }
+    </script>
+</head>
+<body> 
+    <div class="container-xl">
+    <h2>Counter</h2>
+    <h1>0</h1>
+    <button onclick="count()">Increment</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="decrement()">Decrement</button>
+    </div>
+      
+</body>
+</html>
