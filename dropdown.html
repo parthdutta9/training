@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+    margin-top: 100px;  
+        }
+        body{
+    background-color: gray;
+    margin: 0px; 
+        }
+    </style>
+</head>
+
+<body>
+    <form>  
+        <div class="form1">
+          <h2>Choose Class:</h2> 
+            <select id = "myList" onchange = "dropDown()">        
+              <option>Select</option>   
+              <option>X</option>  
+              <option>XI</option>
+              <option>XII</option> 
+        </div>
+    </form>
+</body>
+<script>
+    function dropDown() 
+{  
+    var mylist = document.querySelector('#myList');
+    const value = mylist.options[mylist.selectedIndex].text; 
+}
+</script>
+</html>
