@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #demo{
+           height: 400px;
+           width: 500px;
+           color: dimgray;
+           background-color: white;
+           z-index: 1;
+           padding: 4px;
+           opacity: 6px;
+           display: none;
+           border: 2px solid black;
+           outline: rgba(0,0,0,.3) solid 80vh;
+           margin:auto;
+           text-align: center;
+       }
+       .topright{
+
+           position: relative;
+           background-color: darkgray;
+           margin-left: 520px;
+           margin-top: 300px;
+           right: 32px;
+           top:40px;
+           border:2px solid gray;
+           cursor : pointer;
+       }
+     
+    </style>
+
+
+
+
+</head>
+<body>
+    <div id="main">
+        <h3>Click the below button</h3>
+        <button id="open">Click Me</button>
+        <div id="demo"><strong>Vivekananda Institute Of Professional Studies</strong>
+        <span onclick="document.getElementById('YourModalBox').style.display='none'"style="color: black"
+         id="close" class="close-button topright"><b id="close">x</b></span>
+        <div style="color :black">
+            <li>
+                <ul style="font-style: italic;">Welcome to VIPS</ul>
+                <p>It was in the year 1997, that Dr. S.C. Vats, founder of Vivekananda Institute of Professional Studies
+                     (VIPS), met Swami Jitatmanandaji, an eminent educationist,management expert, 
+                     author of books on Modern Physics & Vedanta and Indian Ethos in Management,
+                     an active social worker and the editor of Prabudh Bharat(Awakened India), a journal started by Swami Vivekananda.</p>
+                <ul style="font-style: italic;">About </ul>
+                <p>Vivekananda Institute of Professional Studies is in Pitampura,
+                New Delhi, India. It is a private college, affiliated with Guru Gobind Singh Indraprastha University. </p>
+               
+                
+            </li>  
+        </div>  
+    </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("demo");
+        var click = document.getElementById("open");
+        var close = document.getElementById("close");
+        click.onclick=function(){
+            demo.style.display="block";
+        }
+        close.onclick=function(){
+            demo.style.display="none";
+        }
+    </script>
+    
+</body>
+</html>
