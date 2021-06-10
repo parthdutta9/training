@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+#demo{
+	
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	border: 5px solid black;
+	padding: 10px;
+	height: 50vh;
+	width: 50%;
+	}
+#input
+	{
+	 padding: 0%;
+	height: 30px;
+	position: relative;
+	left: 30%;
+    color: black;
+    background-color: #666;
+	outline: none;
+	border: 1px solid #cdcdcd;
+	border-color: rgba(0, 0, 0, .15);
+	
+	font-size: 16px;
+	}
+#click{
+	padding: 8px 15px;
+	font-size: 10px;
+	position: relative;
+	left: 30%;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: white;
+	background-color: rgba(0, 0, 255, 0.795);
+	border: none;
+	}
+
+#adding:active {
+  	
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+	}
+#delete{
+	padding: 8px 15px;
+	font-size: 10px;
+	position: relative;
+	left: 30%;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	
+	
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 5px #999;
+	}
+#delete:hover {background-color: gray;}
+
+#counting{
+	font-family: cursive;
+	font-size: 15px;
+	position: absolute;
+	left: 30%;
+	color: whitesmoke;
+}
+#list{
+	
+	position: relative;
+	left: 50%;;
+	top: 80%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+    border: 2px solid black;
+	padding: 10px;
+	height: 50vh;
+	width: 50%;
+    
+}
+#header{
+    background-color: #666;
+    color: black;
+    left: 50%;
+    text-align: center;
+}
+	</style>
+    <title></title>
+</head>
+<body>
+    <h1 id="header">To-Do List</h1>
+	<div id="demo">
+		<input type="text" id="input" onfocus="this.value=''" placeholder="Enter here" >
+		<button id="click" onclick="adddata()">ADD</button>
+		
+    		<div id="list">
+                <ul id="array">
+           			
+        		</ul>
+    		</div>
+	</div>
+	
+
+
+
+	<script type="text/javascript">
+     var count=0;
+     var array = document.getElementById("array");
+
+
+
+    function adddata(){
+    task = document.getElementById('input').value;    
+    document.getElementById("array").innerHTML += `<li onclick="this.style.textDecoration 
+    = 'line-through' " " id=`
+	+count+'>'+ task + `<button id="delete" onclick= "remove(this)" >Remove</button></li>`;
+count++
+
+}
+
+var remove = function(li){
+    array.removeChild(li.parentNode);
+    count--;
+}
+
+</script>
+</body>
+</html>
